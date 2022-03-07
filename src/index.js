@@ -7,7 +7,7 @@ const app = express();
 
 // Middleware
 // Handle users that are not logged in
-app.use('/', express.static("site-files/frontend/public"));
+app.use('/', express.static(`${__dirname}/site-files/frontend/public`));
 app.use(express.urlencoded());
 app.use(session({
     secret: "secret key",
@@ -16,11 +16,11 @@ app.use(session({
 }));
 
 // Variables
-var logins = JSON.parse(fs.readFileSync("./site-files/backend/logins.json", "utf-8"));
+var logins = JSON.parse(fs.readFileSync(`${__dirname}/site-files/backend/logins.json`, "utf-8"));
 
 
 // App
-app.use("/app", require("./site-files/backend/routes.js"));
+app.use("/app", require(`${__dirname}/site-files/backend/routes.js`));
 
 
 
