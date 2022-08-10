@@ -4,11 +4,12 @@
 
 
 # TODO
- - Write front end
-   - Write Register page
- - Write back end
-   - Encrypt password with BCrypt
-   - Remove unnecesary "site-files" folder
- - Other
-   - Make proper login method (ie: button)
+- [ ] Write front end
+  - [ ] Write Register page
+  - [ ] Add react with server side props (if possible)
 
+- [ ] Write back end
+  - [ ] Encrypt passwords with BCrypt
+  - [ ] Add database (sqlite)
+  - [x] Remove unnecesary "site-files" folder
+    - Cleaned up file structure of "site-files"
