@@ -1,4 +1,4 @@
-"use strict";
+const path = require("path");
 const express = require("express");
 let router = express.Router();
 
@@ -10,12 +10,14 @@ router.use("*", (req, res, n) => {
   else {n()}
 })
 
+router.use("/", express.static(path.resolve(__dirname, "app")));
 
+/*
 router.route("/") 
   .get((req, res) => {
-    //res.sendFile("/site-file/frontend/private/index.html");
-    res.send("A");
+    res.sendFile(path.resolve(__dirname, "../frontend/private/index.html"));
+    //res.send("A");
   })
-;
+;*/
 
 module.exports = router;
